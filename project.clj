@@ -17,5 +17,7 @@
                  [com.twitter/carbonite "1.3.2"]
                  [com.twitter/maple "0.2.2"]]
   :profiles {:provided {:dependencies [[org.apache.hadoop/hadoop-core "1.1.2"]]}
-             :dev {:dependencies
-                   [[org.apache.hadoop/hadoop-core "1.1.2"]]}})
+             :dev {:plugins [[lein-midje "3.0.0"]]
+                   :dependencies
+                   [[midje "1.5.0"]
+                    [org.apache.hadoop/hadoop-core "1.1.2"]]}})

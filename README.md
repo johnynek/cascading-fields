@@ -43,3 +43,13 @@ user=> (ClojureMap. (fields "face") +)
 ```
 
 Once you build your `JobConf`, you'll need to include `"cascalog.hadoop.ClojureKryoSerialization"` in your `"io.serializations"` entry, just like Scalding.
+
+## Tests
+
+This project uses [Midje](https://github.com/marick/Midje) for testing. Run the tests in the background with
+
+```bash
+lein midje :autotest
+```
+
+This will watch the test directory for changes (and new files) and run the tests every time it sees a change. I've included a couple of tests to get you started.
