@@ -50,8 +50,7 @@ public class ClojureCascadingBase extends BaseOperation {
   public void prepare(FlowProcess fp, OperationCall call) {
     IFn fn = Util.deserializeFn(serializedFn);
 
-    Boolean isPrepared =
-        (Boolean) Util.bootSimpleFn("cascalog.logic.def", "prepared?").invoke(fn);
+    Boolean isPrepared = false;
 
     if (isPrepared.booleanValue()) {
       Object res = fn.invoke(fp, call);
